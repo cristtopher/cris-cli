@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'cris-cli'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=cris-cli",
+                    "--package=cris-cli"
+                ],
+                "filter": {
+                    "name": "cris-cli",
+                    "kind": "bin"
+                }
+            },
+            "args": ["hola", "mundo"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'cris-cli'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=cris-cli",
+                    "--package=cris-cli"
+                ],
+                "filter": {
+                    "name": "cris-cli",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
